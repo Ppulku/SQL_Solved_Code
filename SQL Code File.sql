@@ -1,5 +1,5 @@
 /* 
-
+ 
 ----------Q.1----------
 
 Create a function in your own database that takes two 
