@@ -529,7 +529,7 @@ Leetcode Problem 460
 */
 
 SELECT 	view.product_id,
-	view. store,
+	view.store,
 	view.price
 FROM(	SELECT product_id, 'storel' AS store, storel AS price FROM Products
 	UNION ALL
