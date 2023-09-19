@@ -498,3 +498,56 @@ FROM Sessions
 UNION
 SELECT '15 or more' AS bin, SUM duration/60 > 15) AS 'total'
 FROM Sessions;
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+/*
+
+----------Q.8----------
+
+Leetcode Problem 454
+
+*/
+
+SELECT product_id,
+SUM(CASE WHEN store = 'storel' THEN price END AS store1,
+SUM(CASE WHEN store = 'store2' THEN price END AS store2,
+SUM CASE WHEN store = 'store3' THEN price END AS store3
+FROM Products
+GROUP BY product_id
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+/*
+
+----------Q.9----------
+
+Leetcode Problem 460
+
+*/
+
+SELECT 	view.product_id,
+	view. store,
+	view.price
+FROM(	SELECT product_id, 'storel' AS store, storel AS price FROM Products
+	UNION ALL
+	SELECT product_id, 'store2' AS store, store AS price FROM Products
+	UNION ALL
+	SELECT product_id, 'store3' AS store, store3 AS price FROM Products
+	) AS view
+WHERE view.price IS NOT NULL;
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+/*
+
+----------Q.9----------
+
+Leetcode Problem 460
+
+*/
+
+
