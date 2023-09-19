@@ -546,7 +546,7 @@ WHERE view.price IS NOT NULL;
 
 ----------Q.9----------
 
-Leetcode Problem 460
+Leetcode Problem
 
 */
 
